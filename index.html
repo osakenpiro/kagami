@@ -885,7 +885,7 @@ function shareX(){
   const es=getEntries();const i=es.findIndex(e=>e.date===dateKey());
   if(i>=0){es[i].postedToX=true;localStorage.setItem(LS_KEY,JSON.stringify(es))}
   toast('Xに投稿しました ✓');
-}
+  
 async function copyTxt(){
   try{await navigator.clipboard.writeText(tweetText());toast('コピーしました')}
   catch{toast('コピーできませんでした')}
